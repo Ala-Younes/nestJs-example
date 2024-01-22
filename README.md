@@ -55,4 +55,5 @@ Follow these steps to set up and run the project:
 Output example for success (`Don't forget to run the docker container`):
 
 ![Alt text](image.png)
+
 Happy coding!
