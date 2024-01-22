@@ -1,73 +1,58 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# NestJS Config and Prisma Book CRUD Example
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Introduction
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Welcome to this NestJS project, which serves as a concise introduction to NestJS configuration and usage, with a focus on best practices. The primary goal of this project is to provide a clear example of a Book CRUD (Create, Read, Update, Delete) application while adhering to recommended NestJS practices.
 
-## Description
+## Features
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+### 1. Environment Variable Validation
 
-## Installation
+I prioritize the robustness of my applications by including logic for validating environment variables. This ensures that your application is properly configured from the start.
 
-```bash
-$ yarn install
-```
+### 2. Prisma + Postgres Integration
 
-## Running the app
+To enhance database operations, I have integrated [Prisma](https://www.prisma.io/) with a PostgreSQL database. This powerful combination simplifies database interactions and promotes efficient data management.
 
-```bash
-# development
-$ yarn run start
+### 3. Custom Error Handling with Pipes
 
-# watch mode
-$ yarn run start:dev
+Experience a personalized approach to handling errors from bad requests through the use of custom pipes. This feature enables a more user-friendly and informative response when errors occur, contributing to a better user experience.
 
-# production mode
-$ yarn run start:prod
-```
+### 4. Postman Collection for Testing
 
-## Test
+To streamline the testing process, I provide a Postman collection that allows you to run tests effortlessly. Ensure you have [newman](https://www.npmjs.com/package/newman) and [@types/newman](https://www.npmjs.com/package/@types/newman) installed to leverage this feature.
 
-```bash
-# unit tests
-$ yarn run test
+## Getting Started
 
-# e2e tests
-$ yarn run test:e2e
+Follow these steps to set up and run the project:
 
-# test coverage
-$ yarn run test:cov
-```
+1. Install dependencies:
 
-## Support
+   ```bash
+   npm install
+   ```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+2. Configure environment variables:
 
-## Stay in touch
+   - Create a `.env` file with your db key : `DATABASE_URL=YOUR_DB_URL`
+   - Populate the necessary variables with your values.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+3. Run the application:
 
-## License
+   ```bash
+   npm run start
+   ```
 
-Nest is [MIT licensed](LICENSE).
+4. Explore and test:
+
+   - Utilize the provided Postman collection for easy testing.
+   - Ensure you have newman and @types/newman installed:
+
+     ```bash
+     npm install -g newman @types/newman
+     ```
+
+Output example for success (`Don't forget to run the docker container`):
+
+![Alt text](image.png)
+Happy coding!

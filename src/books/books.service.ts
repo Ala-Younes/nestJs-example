@@ -92,7 +92,11 @@ export class BooksService {
       if (count === 0) {
         throw new Error(`No books to delete`);
       }
-      return count;
+      return {
+        Result: {
+          BooksDeleted: count,
+        },
+      };
     } catch (err) {
       const response = {
         statusCode: 204,

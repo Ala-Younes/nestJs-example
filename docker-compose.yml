@@ -1,18 +1,3 @@
-# services:
-#   mongodb:
-#     image: mongo:latest
-#     container_name: local_mongodb
-#     environment:
-#       - MONGO_INITDB_ROOT_USERNAME=ala
-#       - MONGO_INITDB_ROOT_PASSWORD=ala
-#     ports:
-#       - 27018:27017
-#     volumes:
-#       - mongodata:/var/lib/mongodb/data
-
-# volumes:
-#   mongodata:
-
 services:
   dev-db:
     image: postgres:latest
@@ -23,21 +8,3 @@ services:
       POSTGRES_USER: ala
       POSTGRES_PASSWORD: ala
       POSTGRES_DB: bookDb
-    networks:
-      - freecodecamp
-
-networks:
-  freecodecamp:
-# services:
-#   mongo:
-#     build: ./mongodb_rs
-#     container_name: local_mongodb
-#     restart: always
-#     environment:
-#       MONGO_INITDB_ROOT_USERNAME: ala
-#       MONGO_INITDB_ROOT_PASSWORD: ala
-#       MONGO_INITDB_DATABASE: booksDb
-#       MONGO_REPLICA_HOST: localhost
-#       MONGO_REPLICA_PORT: '27018'
-#     ports:
-#       - 27018:27017
